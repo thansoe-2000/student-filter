@@ -1,0 +1,32 @@
+{% extends 'layout/master.html' %}
+{% block content %}
+<h1>All Members</h1>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Towns</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+         {% for person in persons %}
+         <tr>
+            <td>{{ person.id}}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.towns.name }}</td>
+            
+         </tr>
+         {% endfor %}
+      
+    </tbody>
+  </table>
+
+  <!-- {% for town in towns %}
+   <h3>{{ town.name }}</h3>
+   {% endfor %} -->
+</div>
+{% endblock content %}
