@@ -1,0 +1,26 @@
+{% extends 'partials/index.html' %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col col-md-12">
+    <div class=" shadow">
+        <h2>Add new member</h2>
+       <div class="body">
+          <form action="" method="POST">
+             {% csrf_token %}
+             <div class="col col-md-6">
+                {{form.name|as_crispy_field}}
+             </div>
+
+             <div class="col col-md-6">
+               {{form.towns|as_crispy_field}}
+            </div>
+             
+             
+             
+                <button type="submit" class="btn btn-sm btn-success">Create</button>
+                <button type="reset" class="btn btn-sm btn-danger">Cancle</button>
+          </form>
+       </div>
+    </div>
+</div>
+{% endblock %}
