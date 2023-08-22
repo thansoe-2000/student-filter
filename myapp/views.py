@@ -37,3 +37,8 @@ def detail(request, pk=id):
    return render(request, 'pages/detail.html', context)
 
 
+def check():
+   pass
+
+def error_500(request):
+   return render(request, 'pages/500_error.html' )
